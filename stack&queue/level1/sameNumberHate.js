@@ -1,16 +1,13 @@
 function solution(arr) {
   var answer = [];
 
-  let number = 0
   arr.forEach((item, index) => { 
     if (index === 0) {
       answer.push(item)
-      number = item
       return
     }
-    if (number !== item) {
+    if (answer[answer.length - 1] !== item) {
       answer.push(item)
-      number = item
     }
   })
     return answer;
